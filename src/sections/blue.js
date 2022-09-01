@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger); 
 
 
-export const Black = () => {
+export const BlueSec = () => {
 
   const headerRef = useRef(null);
 
@@ -26,11 +26,11 @@ export const Black = () => {
       }, {
         duration: 0.9, 
         autoAlpha: 1,
-        ease: 'circ',
+        ease: 'none',
         scrollTrigger: {
           id: `section-${index+1}`,
           trigger: el,
-          start: 'top top',
+          start: 'top +=100',
           pin: true  ,
           pinType : 'fixed',
           pinSpacing: false,
@@ -45,16 +45,17 @@ export const Black = () => {
 
 
   useEffect(()=>{
-          gsap.fromTo(".secs",{y:-200 , autoAlpha: 0.2, scale:0.2}, {
-        duration: 1,
+          gsap.fromTo(".secs3",{y:200 , autoAlpha: 0.2,scale:0.5}, {
+        duration: 2,
         autoAlpha: 1,
         scale: 1,
         opacity: 1,
-        ease: "none", y:69,
+        ease: "none", y:-200,
         scrollTrigger: {
-          trigger: ".secs",
-          start: "top top",
-          toggleActions: "reverse ",
+          trigger: ".secs3",
+          start: "top 10%",
+          end: "bottom 10%",
+          toggleActions: "reverse",
           scrub: 3,
         },
       });
@@ -62,31 +63,30 @@ export const Black = () => {
   },[]);
 
 
+
   const addToRefs = el => {
     if (el && !revealRefs.current.includes(el)) {
         revealRefs.current.push(el);
     }
   };
-
-
-
-
-  ScrollTrigger.refresh()
+ScrollTrigger.refresh()
 
     return (
-        <div className="App-section" ref={addToRefs}>
+        <div className="App-section-4" ref={addToRefs}>
             <div className="content">
-              <div className="secs">
-                <h1 >
-                DRIVING DIGITAL TRANSFORMATION
+              <div className='secs3'>
+                <h1>
+                WE BUILD APPS
                 </h1>
               </div>
-                <img width={360} src="./gvl-frame-n-2@2x-8.png" alt=""/>
+                
+                <img width={360} src="./app-bg.png" alt=""/>
+                <img className='images' src='./fingerprint.jpg' alt=''/>
                 <h2>
-                    Your Digital Transformation Journey Starts Here.
+                    Whether it is to capture the first mover advantage, raise funds or to simplyfy business processes, we build your customisable app to spec from prototype to publication on the Android & Apple stores. 
                 </h2>  
                 <h2>
-                    DT Consultancy . Branding . Marketing . Production . Tech . Web3 Consultancy
+                    Tech
                 </h2> 
             </div>
         </div>

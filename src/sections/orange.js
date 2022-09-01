@@ -53,7 +53,8 @@ export const Orange = () => {
         ease: "none", y:-200,
         scrollTrigger: {
           trigger: ".secs1",
-          start: "top 50%",
+          start: "top 10%",
+          end: "bottom 10%",
           toggleActions: "reverse",
           scrub: 3,
         },

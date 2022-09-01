@@ -4,9 +4,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger); 
 
 
-export const Black = () => {
+export const Frame = () => {
 
-  const headerRef = useRef(null);
+      const headerRef = useRef(null);
 
   const revealRefs = useRef([]);
   revealRefs.current = [];
@@ -26,7 +26,7 @@ export const Black = () => {
       }, {
         duration: 0.9, 
         autoAlpha: 1,
-        ease: 'circ',
+        ease: 'none',
         scrollTrigger: {
           id: `section-${index+1}`,
           trigger: el,
@@ -42,20 +42,36 @@ export const Black = () => {
     });
 
   }, []);
+    useEffect(()=>{
+          gsap.fromTo(".secs7",{ autoAlpha: 0, scale:0.2}, {
+        duration: 1,
+        autoAlpha: 0.9,
+        scale: 1,
+        opacity: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".secs7",
+          start: "top 10%",
+          end: "bottom 10%",
+          toggleActions: "play",
+          scrub: 3,
+        },
+      });
+
+  },[]);
 
 
   useEffect(()=>{
-          gsap.fromTo(".secs",{y:-200 , autoAlpha: 0.2, scale:0.2}, {
+          gsap.to(".secs9", {
         duration: 1,
-        autoAlpha: 1,
         scale: 1,
         opacity: 1,
         ease: "none", y:69,
         scrollTrigger: {
-          trigger: ".secs",
+          trigger: ".secs9",
           start: "top top",
-          toggleActions: "reverse ",
-          scrub: 3,
+          toggleActions: "play",
+          scrub: 2,
         },
       });
 
@@ -73,23 +89,16 @@ export const Black = () => {
 
   ScrollTrigger.refresh()
 
-    return (
-        <div className="App-section" ref={addToRefs}>
-            <div className="content">
-              <div className="secs">
-                <h1 >
-                DRIVING DIGITAL TRANSFORMATION
-                </h1>
-              </div>
-                <img width={360} src="./gvl-frame-n-2@2x-8.png" alt=""/>
-                <h2>
-                    Your Digital Transformation Journey Starts Here.
-                </h2>  
-                <h2>
-                    DT Consultancy . Branding . Marketing . Production . Tech . Web3 Consultancy
-                </h2> 
+  return (
+      <div className="App-section" ref={addToRefs}>
+          <div className="content">
+            <div className="secs7">
+              <h1 >
+              WHAT MAKES US DIFFERENT?
+              </h1>
             </div>
-        </div>
-        
-    )
+              <img width={360} src="./gvl-frame-n-2@2x-8.png" alt=""/>
+          </div>
+      </div>
+  )
 }

@@ -6,7 +6,11 @@ import './App.css';
 import { Black } from './sections/black';
 import { Orange } from './sections/orange';
 import { Purple } from './sections/purple';
-
+import { BlueSec } from './sections/blue';
+import { Purplish } from './sections/purplish';
+import { Sponsors } from './sections/sponsors';
+import { Frame } from './sections/frame-plain';
+import { FrameAnimate } from './sections/frame-animate';
 
 const App = () => {
 
@@ -30,6 +34,11 @@ const navItems = ['Home', 'About', 'Contact'];
         <Black key={'rcdrv'}/>
         <Orange key={'skdem'}/>
         <Purple key={'wiccw'} />
+        <BlueSec key={'vevvr'}/>
+        <Purplish key={'cwnlc'}/>
+        <Frame key={'frwgh'}/>
+        <FrameAnimate key={'efrg'}/>
+        <Sponsors key={'kfegf'}/>
       </main>
     </div>
   );

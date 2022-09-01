@@ -44,15 +44,16 @@ export const Purple = () => {
   });
 
  useEffect(()=>{
-          gsap.fromTo(".secs2",{y:200 , autoAlpha: 0, scale:0.5}, {
+          gsap.fromTo(".secs2",{y:100 , autoAlpha: 0, scale:0.5}, {
         duration: 1,
         autoAlpha: 1,
-        scale: 1,
+        scale: 0.8,
         opacity: 1,
-        ease: "none", y:-200,
+        ease: "none", y:-100,
         scrollTrigger: {
           trigger: ".secs2",
-          start: "top 50%",
+          start: "top 10%",
+          end: "bottom 10%",
           toggleActions: "reverse",
           scrub: 4,
         },
@@ -87,7 +88,7 @@ ScrollTrigger.refresh()
                 <h2>
                     Production
                 </h2> 
-                <img className='images' src='./larrie.jpg' alt=''/>
+                <img  height={200} src='./larrie.jpg' alt=''/>
             </div>
         </div>
         

@@ -4,6 +4,7 @@
 
 .content {
     max-width: 50%;
+    min-height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,6 +25,21 @@ width: 100vw;
 padding-top: 12px;
 align-items: center;
 font-size: large;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav {
+    height: 11vh;
+  }
+
+  h1 {
+    font-size: 27px;
+    width: 500px;
+  }
+
+  .content {
+    width: 500px;
+  }
 }
 
 .App-section {
@@ -58,7 +74,7 @@ font-size: large;
 }
 
 .App-section-4 {
-  background: url("../public/slide-4-bg.jpg");
+  background: url("../public/slide-5-bg.png");
   display: flex;
   align-content: center;
   justify-content: center;
@@ -66,6 +82,53 @@ font-size: large;
   background-size: cover;
   background-position: center;
   height: 100vh;
+}
+
+.App-section-5 {
+  background: url("../public/slide6-bg.jpg");
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.App-section-sponsors {
+  background: url("../public/sourpartners.jpg");
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: aliceblue;
+}
+
+.App-section-sponsors-2 {
+  background: url("../public/sourclients.jpg");
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: aliceblue;
+}
+
+.App-section-sponsors-3 {
+  background: url("../public/letschat.jpg");
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: aliceblue;
 }
 
 .bgImage {
@@ -78,9 +141,21 @@ font-size: large;
   border: 1px solid;
   border-color: rgba(1, 20, 37, 0.096);
   border-radius: 27px;
-  width: 80%;
+  width: 40vw;
   display: flex;
   margin-bottom: 50px;
+}
+
+.framez {
+background-color: black !important;
+width: 100vw;
+height: 50vh;
+translate: 0px -320px;
+text-align: center;
+font-family: "Audiowide", sans-serif;
+padding: 36px;
+transform: scale(0.94);
+font-size: 69px;
 }
 
 
@@ -148,4 +223,9 @@ span:nth-child(2) {
     opacity: 1;
     filter: blur(0);
   }
+}
+
+.App-end {
+  min-height: 100%;
+  background-color: black;
 }
