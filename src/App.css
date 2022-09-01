@@ -1,0 +1,151 @@
+.App {
+  text-align: center;
+}
+
+.content {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding-bottom: 200px;
+}
+
+.App-main {
+  background: black;
+  height: 100vh;
+  width: 100vw;
+}
+
+.nav{
+min-height: 9vh;
+background-color: rgb(0, 0, 0);
+width: 100vw;
+padding-top: 12px;
+align-items: center;
+font-size: large;
+}
+
+.App-section {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    height: 100vh;
+}
+.App-section-2 {
+  background: url("../public/banner-2-bg.jpg");
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.App-section-3 {
+  background: url("../public/banner-3-bg.jpg");
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.App-section-4 {
+  background: url("../public/slide-4-bg.jpg");
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.bgImage {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+.images {
+  border: 1px solid;
+  border-color: rgba(1, 20, 37, 0.096);
+  border-radius: 27px;
+  width: 80%;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+
+@import url("https://fonts.googleapis.com/css?family=Audiowide");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Audiowide", sans-serif;
+  max-width: fit-content;
+  text-align: center;
+  transform: scale(0.94);
+  animation: scale 1s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  padding: 36px;
+  font-size: 69px;
+  display: flex;
+  flex-direction: row;
+  translate: 0px 240px !important;
+  color: white;
+}
+
+h2 {
+  max-width: 50ch;
+  font-family: sans-serif;
+  text-align: center;
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  padding: 20px;
+}
+
+@keyframes scale {
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+span:nth-child(1) {
+  animation: fade-in 0.3s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(2) {
+  animation: fade-in 0.9 s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  animation: fade-out 1 s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
