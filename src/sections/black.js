@@ -30,7 +30,7 @@ export const Black = () => {
         scrollTrigger: {
           id: `section-${index+1}`,
           trigger: el,
-          start: 'top top',
+          start: 'top +=10',
           pin: true  ,
           pinType : 'fixed',
           pinSpacing: false,
