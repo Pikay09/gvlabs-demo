@@ -30,12 +30,12 @@ export const Orange = () => {
         scrollTrigger: {
           id: `section-${index+1}`,
           trigger: el,
-          start: 'top +=100',
+          start: 'top top',
+          end: 'bottom 30%',
           pin: true  ,
-          pinType : 'fixed',
-          pinSpacing: false,
           preventOverlaps: true,
-          toggleActions: 'play pause resume reverse',
+          scrub: true,
+          toggleActions: 'play pause none reverse',
         }
       });
 
@@ -50,7 +50,7 @@ export const Orange = () => {
         autoAlpha: 1,
         scale: 1,
         opacity: 1,
-        ease: "none", y:-200,
+        ease: "none", y:-69,
         scrollTrigger: {
           trigger: ".secs1",
           start: "top 10%",
@@ -79,8 +79,8 @@ ScrollTrigger.refresh()
                 WE BUILD BRANDS
                 </h1>
               </div>
-                
-                <img width={360} src="./banner-2-square.png" alt=""/>
+              <div>
+                <img style={{padding:"20px"}} width={360} src="./banner-2-square.png" alt=""/>
                 <h2>
                     You don't have to break the bank to build a great brand.
                     Iconic brands are built over time with strategic evolution.
@@ -89,8 +89,8 @@ ScrollTrigger.refresh()
                     Branding
                 </h2> 
                 <img className='images' src='./yolo.jpg' alt=''/>
+              </div>
             </div>
         </div>
-        
     )
 }

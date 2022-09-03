@@ -30,12 +30,11 @@ export const BlueSec = () => {
         scrollTrigger: {
           id: `section-${index+1}`,
           trigger: el,
-          start: 'top +=100',
+          start: 'top top',
+          end: 'bottom 80%',
           pin: true  ,
-          pinType : 'fixed',
-          pinSpacing: false,
           preventOverlaps: true,
-          toggleActions: 'play pause resume reverse',
+          scrub: 2,
         }
       });
 
@@ -54,7 +53,7 @@ export const BlueSec = () => {
         scrollTrigger: {
           trigger: ".secs3",
           start: "top 10%",
-          end: "bottom 10%",
+          end: "bottom 99%",
           toggleActions: "reverse",
           scrub: 3,
         },
@@ -79,8 +78,8 @@ ScrollTrigger.refresh()
                 WE BUILD APPS
                 </h1>
               </div>
-                
-                <img width={360} src="./app-bg.png" alt=""/>
+                <div>
+                  <img width={360} src="./app-bg.png" alt=""/>
                 <img className='images' src='./fingerprint.jpg' alt=''/>
                 <h2>
                     Whether it is to capture the first mover advantage, raise funds or to simplyfy business processes, we build your customisable app to spec from prototype to publication on the Android & Apple stores. 
@@ -88,6 +87,7 @@ ScrollTrigger.refresh()
                 <h2>
                     Tech
                 </h2> 
+                </div>
             </div>
         </div>
         

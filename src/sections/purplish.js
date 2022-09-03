@@ -30,12 +30,11 @@ export const Purplish = () => {
         scrollTrigger: {
           id: `section-${index+1}`,
           trigger: el,
-          start: 'top +=100',
+          start: 'top top',
+          end: 'bottom 80%',
           pin: true  ,
-          pinType : 'fixed',
-          pinSpacing: false,
           preventOverlaps: true,
-          toggleActions: 'play pause resume reverse',
+          scrub: true,
         }
       });
 
@@ -79,6 +78,7 @@ ScrollTrigger.refresh()
                 WEB3 CONSULTANCY
                 </h1>
               </div>
+              <div>
                 <img width={360} src="./banner-2-square.png" alt=""/>
                 <h2>
                     We charter the uncharted with properly mapped out strategies that sets your project up for success.
@@ -87,6 +87,7 @@ ScrollTrigger.refresh()
                     Web3 Consultancy
                 </h2> 
                 <img width={360} src='./firo.jpg' alt=''/>
+              </div>
             </div>
         </div>
         

@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  height: auto;
+  width: 100vw;
 }
 
 .content {
@@ -15,7 +17,7 @@
 .App-main {
   background: black;
   height: 100vh;
-  width: 100vw;
+  width: auto;
 }
 
 .nav{
@@ -27,9 +29,9 @@ align-items: center;
 font-size: large;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 720px) {
   .nav {
-    height: 11vh;
+    height: 15vh;
   }
 
   h1 {
@@ -38,7 +40,9 @@ font-size: large;
   }
 
   .content {
-    width: 500px;
+    height: fit-content;
+    width: auto;
+    translate: 0px -69px;
   }
 }
 
@@ -47,30 +51,28 @@ font-size: large;
     display: flex;
     align-content: center;
     justify-content: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background-repeat: repeat-y;
+    background-size: 1700 2200px;
     background-position: center;
-    height: 100vh;
 }
 .App-section-2 {
   background: url("../public/banner-2-bg.jpg");
   display: flex;
   align-content: center;
   justify-content: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat-y;
+  background-size: 1700px 2200px;
   background-position: center;
-  height: 100vh;
 }
+
 .App-section-3 {
   background: url("../public/banner-3-bg.jpg");
   display: flex;
   align-content: center;
   justify-content: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat-y;
+  background-size: 1700px 2200px;
   background-position: center;
-  height: 100vh;
 }
 
 .App-section-4 {
@@ -78,10 +80,9 @@ font-size: large;
   display: flex;
   align-content: center;
   justify-content: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat-y;
+  background-size: 1700px 2500px;
   background-position: center;
-  height: 100vh;
 }
 
 .App-section-5 {
@@ -89,10 +90,9 @@ font-size: large;
   display: flex;
   align-content: center;
   justify-content: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat-y;
+  background-size: 1700px 2200px;
   background-position: center;
-  height: 100vh;
 }
 
 .App-section-sponsors {
@@ -100,11 +100,9 @@ font-size: large;
   display: flex;
   align-content: center;
   justify-content: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat-y;
+  background-size: 1700px 2200px;
   background-position: center;
-  height: 100vh;
-  color: aliceblue;
 }
 
 .App-section-sponsors-2 {

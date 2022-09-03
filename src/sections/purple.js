@@ -24,18 +24,19 @@ export const Purple = () => {
       gsap.fromTo(el, {
         autoAlpha: 0
       }, {
-        duration: 0.9, 
+        duration: 2, 
         autoAlpha: 1,
         ease: 'none',
         scrollTrigger: {
           id: `section-${index+1}`,
           trigger: el,
-          start: 'top +=100',
+          start: 'top top',
+          end: 'bottom 99%',
           pin: true  ,
-          pinType : 'fixed',
-          pinSpacing: false,
           preventOverlaps: true,
-          toggleActions: "play complete none reset",
+          scrub: true,
+          toggleActions: 'play reverse none reverse',
+          markers: true,
         }
       });
 
@@ -80,15 +81,16 @@ ScrollTrigger.refresh()
                 PERFORMANCE BASED ASSET GENERATION
                 </h1>
               </div>
-                
-                <img width={360} src="./banner-3-img-square.png" alt=""/>
+                <div>
+                  <img width={360} src="./banner-3-img-square.png" alt=""/>
                 <h2>
                     Content is King. We plan and shoot data driven content to deliver measurable results for your business.
                 </h2>  
                 <h2>
                     Production
                 </h2> 
-                <img  height={200} src='./larrie.jpg' alt=''/>
+                <img  height={160} src='./larrie.jpg' alt=''/>
+                </div>
             </div>
         </div>
         

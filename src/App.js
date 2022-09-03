@@ -29,7 +29,6 @@ const navItems = ['Home', 'About', 'Contact'];
           </Box>
         </Toolbar>
       </AppBar>
-     
       <main className="App-main">
         <Black key={'rcdrv'}/>
         <Orange key={'skdem'}/>
