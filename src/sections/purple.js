@@ -36,7 +36,6 @@ export const Purple = () => {
           preventOverlaps: true,
           scrub: true,
           toggleActions: 'play reverse none reverse',
-          markers: true,
         }
       });
 
